@@ -18,17 +18,13 @@
 (function() {
     'use strict';
 
-    var path = document.location.pathname.slice(0, document.location.pathname.lastIndexOf("/"))
+    const path = document.location.pathname.slice(0, document.location.pathname.lastIndexOf("/"));
 
-    for (let cookie of document.cookie.split("; ")) {
-        let [key, value] = cookie.split("=", 2);
-        if (key == "devsite-appearance-cookie") {
-            if (value != "dark") {
-                document.cookie = `devsite-appearance-cookie=dark; expires=Session;path=${path}`;
-                window.location.reload();
-            } else {
-                return;
-            }
-        }
+    const cookies = document.cookie.split("; ");
+    const darkModeCookie = cookies.find((c) => c.split("=")[0] == "devsite-appearance-cookie")
+
+    if (darkModeCookie == undefined || darkModeCookie.split("=")[1] != 'dark') {
+        document.cookie = `devsite-appearance-cookie=dark;expires=Session;path=${path}`;
+        window.location.reload();
     }
 })();
