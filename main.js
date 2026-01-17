@@ -1,16 +1,17 @@
 // ==UserScript==
 // @name         Force Dark Android API Reference
 // @namespace    http://tampermonkey.net/
-// @version      v1.1.0
-// @updateURL https://raw.githubusercontent.com/James-SSH/userscript-force-android-api-dark-mode/refs/heads/main/main.js
-// @downloadURL https://raw.githubusercontent.com/James-SSH/userscript-force-android-api-dark-mode/refs/heads/main/main.js
+// @version      v1.1.1
+// @source       https://github.com/James-SSH/userscript-force-android-api-dark-mode
+// @updateURL    https://raw.githubusercontent.com/James-SSH/userscript-force-android-api-dark-mode/refs/heads/main/main.js
+// @downloadURL  https://raw.githubusercontent.com/James-SSH/userscript-force-android-api-dark-mode/refs/heads/main/main.js
 // @description  Force dark mode on the API android reference
 // @author       James-SSH
 // @match        https://developer.android.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=android.com
 // @grant        none
-// @run-at      document-end
-// @run-in     normal-tabs
+// @run-at       document-end
+// @run-in       normal-tabs
 // @tag android
 // @tag darkmode
 // ==/UserScript==
